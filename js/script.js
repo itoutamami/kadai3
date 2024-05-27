@@ -33,3 +33,14 @@ $(function () {
     }
   });
 });
+$(function() {
+  $('[name="受講形式"]:radio').change( function() {
+    if($('[id=option1]').prop('checked')){
+      $('#content2').hide();
+      $('#content1').show();
+    } else if ($('[id=option2]').prop('checked')) {
+      $('#content1').hide();
+      $('#content2').show();
+    } 
+  });
+});
